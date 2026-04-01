@@ -1,0 +1,6 @@
+# Robots.txt for The Back Doctor
+User-agent: *
+Allow: /
+
+# Sitemaps help search engines find your content faster
+Sitemap: https://dpolozov.github.io/thebackdoctor/sitemap.xml
