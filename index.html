@@ -26,7 +26,8 @@
     <li><a href="#services">Services</a></li>
     <li><a href="#reviews">Reviews</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#contact" class="nav-cta">Book Appointment</a></li>
+    <li><a href="tel:6507377667" class="btn-secondary-nav">Call Us</a></li>
+    <li><a href="#schedule" class="nav-cta">Book Appointment</a></li>
   </ul>
 </nav>
 
@@ -126,7 +127,7 @@
         Beyond the clinic, Dr. Cheng is a fixture on the sidelines of local South San Francisco athletics. By providing immediate injury assessment and performance tuning for athletes at the moment of competition, he ensures that our local sports community stays mobile, safe, and performing at their absolute peak.
       </p>
     </div>
-    <a href="#contact" class="btn-primary" style="margin-top:40px">Book a Consultation</a>
+    <a href="#schedule" class="nav-cta">Book a Consultation</a>
   </div>
 </section>
 
@@ -380,12 +381,30 @@
   </div>
 </section>
 
+<section id="reviews" class="reveal">
+  <div class="reviews-container" style="text-align: center; max-width: 800px; margin: 0 auto;">
+    <div class="section-eyebrow">Patient Feedback</div>
+    <h2 class="section-title" style="font-family: var(--serif);">Review Your <em>Experience</em></h2>
+    <div class="divider-line" style="margin: 20px auto;"></div>
+    <p class="section-lead" style="margin-bottom: 40px;">Your feedback helps our South San Francisco community find the care they need. Please consider sharing your story on Google or Yelp.</p>
+    
+    <div class="review-buttons">
+      <a href="https://search.google.com/local/writereview?placeid=YOUR_GOOGLE_PLACE_ID" target="_blank" class="btn-review google-btn">
+        Review on Google
+      </a>
+      <a href="https://www.yelp.com/writeareview/biz/patrick-cheng-dc-the-back-doctor-south-san-francisco-3?osq=The+Back+Doctor" target="_blank" class="btn-review yelp-btn">
+        Review on Yelp
+      </a>
+    </div>
+  </div>
+</section>
+
 <div class="cta-band">
   <div class="cta-band-text">
     <h2>Ready to move better?</h2>
     <p>New patients receive a comprehensive initial assessment.</p>
   </div>
-  <a href="#contact" class="btn-white">Book Appointment</a>
+  <a href="#schedule" class="btn-white">Book Appointment</a>
 </div>
 
 <section id="contact">
@@ -439,6 +458,25 @@
   </div>
 </footer>
 
+<div id="booking-modal" class="modal">
+  <div class="modal-content">
+    <span class="close-modal">&times;</span>
+    <div class="modal-header">
+      <h2 style="font-family: var(--serif); color: var(--navy);">Schedule Your Visit</h2>
+      <p style="font-family: var(--sans); font-weight: 300; opacity: 0.8;">Select a time that works for you.</p>
+      <p style="font-size: 0.85rem; font-family: var(--sans);">
+        Need help? <a href="tel:6507377667" style="color: var(--teal); font-weight: 500; text-decoration: none;">Call us directly</a>
+      </p>
+    </div>
+    <div class="modal-body">
+      <iframe src="https://backdoctor.acuityscheduling.com/schedule/1ddc9c29" 
+              width="100%" 
+              height="600" 
+              frameBorder="0"></iframe>
+      <script src="https://embed.acuityscheduling.com/js/embed.js" type="text/javascript"></script>
+    </div>
+  </div>
+</div>
 <script src="script.js"></script>
 
 </body>

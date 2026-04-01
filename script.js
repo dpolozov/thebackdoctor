@@ -40,3 +40,36 @@ document.querySelectorAll('section').forEach(section => {
   section.classList.add('reveal');
   observer.observe(section);
 });
+
+// Modal Logic
+const modal = document.getElementById("booking-modal");
+const closeBtn = document.querySelector(".close-modal");
+
+// Function to open modal
+function openBooking() {
+  modal.style.display = "block";
+  document.body.style.overflow = "hidden"; // Prevent scrolling behind modal
+}
+
+// Function to close modal
+function closeBooking() {
+  modal.style.display = "none";
+  document.body.style.overflow = "auto"; 
+}
+
+// Event Listeners
+closeBtn.onclick = closeBooking;
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    closeBooking();
+  }
+}
+
+// Attach to all buttons with href="#schedule" or specific classes
+document.querySelectorAll('a[href="#schedule"], .nav-cta').forEach(button => {
+  button.addEventListener('click', (e) => {
+    e.preventDefault(); // Stop page jump
+    openBooking();
+  });
+});

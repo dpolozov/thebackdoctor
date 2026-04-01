@@ -71,6 +71,42 @@ nav.scrolled { box-shadow: 0 2px 24px rgba(26,43,60,0.1); }
 }
 .nav-cta:hover { background: var(--navy) !important; color: var(--white) !important; }
 
+/* Styling for the Call button to match the Book button's shape/size */
+.btn-secondary-nav {
+  display: inline-block;
+  padding: 10px 24px;
+  background: transparent;
+  color: var(--navy);
+  border: 1px solid var(--navy);
+  font-family: var(--sans);
+  font-weight: 500;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary-nav:hover {
+  background: var(--navy);
+  color: var(--white);
+}
+
+/* Mobile Adjustments */
+@media (max-width: 900px) {
+  .nav-links li {
+    padding: 8px 0; /* Tighten padding for the two buttons */
+  }
+  
+  .btn-secondary-nav {
+    display: block;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
 /* hamburger */
 .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
 .hamburger span { display: block; width: 24px; height: 2px; background: var(--navy); transition: .3s; }
@@ -545,6 +581,70 @@ section { padding: 100px 80px; }
 }
 .btn-white:hover { background: var(--navy); color: var(--white); }
 
+/* --- REVIEW SECTION STYLES --- */
+#reviews {
+  background-color: var(--sand);
+  padding: 80px 24px;
+}
+
+.review-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.btn-review {
+  display: inline-block;
+  padding: 14px 32px;
+  font-family: var(--sans);
+  font-weight: 500;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  min-width: 220px;
+}
+
+/* Google Button - Solid Style */
+.google-btn {
+  background: var(--navy);
+  color: var(--white);
+  border: 1px solid var(--navy);
+}
+
+.google-btn:hover {
+  background: var(--teal);
+  border-color: var(--teal);
+  transform: translateY(-3px);
+}
+
+/* Yelp Button - Outline Style */
+.yelp-btn {
+  background: transparent;
+  color: var(--navy);
+  border: 1px solid var(--navy);
+}
+
+.yelp-btn:hover {
+  background: var(--navy);
+  color: var(--white);
+  transform: translateY(-3px);
+}
+
+@media (max-width: 600px) {
+  .btn-review {
+    width: 100%;
+  }
+}
+
+.logo-img {
+  max-height: 40px; /* Scale down the logo slightly on smaller desktops */
+  width: auto;
+}
+
 /* ── CONTACT / MAP ───────────────────────────────── */
 #contact {
   background: var(--white);
@@ -608,6 +708,62 @@ footer {
 .footer-links { display: flex; gap: 24px; }
 .footer-links a { font-size: .75rem; color: rgba(255,255,255,.55); text-decoration: none; transition: color .2s; }
 .footer-links a:hover { color: var(--white); }
+
+/* --- BOOKING MODAL STYLES --- */
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 2000; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  background-color: rgba(26, 43, 60, 0.8); /* Using var(--navy) with transparency */
+  backdrop-filter: blur(4px);
+}
+
+.modal-content {
+  background-color: var(--white);
+  margin: 5% auto; 
+  padding: 0;
+  width: 90%; 
+  max-width: 900px;
+  border-radius: 4px;
+  position: relative;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+  animation: modalSlideUp 0.4s ease-out;
+}
+
+@keyframes modalSlideUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.modal-header {
+  padding: 24px 32px;
+  border-bottom: 1px solid rgba(46,125,122,0.1);
+}
+
+.close-modal {
+  position: absolute;
+  right: 24px;
+  top: 20px;
+  color: var(--muted);
+  font-size: 32px;
+  font-weight: 300;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.close-modal:hover {
+  color: var(--teal);
+}
+
+.modal-body {
+  padding: 0;
+  height: 70vh;
+  overflow-y: auto;
+}
 
 /* ── ANIMATIONS ──────────────────────────────────── */
 @keyframes fadeUp {
